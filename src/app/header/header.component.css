@@ -1,0 +1,65 @@
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+.fas {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: #5f84e1;
+  border-style: solid;
+  background:#343a40;
+  color:#5f84e1;
+}
+.fas:hover{
+  background: #5f84e1;
+  color: white;
+  text-decoration:none;
+}
+
+.topnavsr .search-container {
+  float: right;
+}
+
+.topnavsr input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border-top:solid;
+  border-bottom:solid;
+  border-left:solid;
+  border-right: none;
+  border-width: 1px;
+  border-color: #5f84e1;
+  border-radius: 20px 00 00 20px;
+  background-color: #343a40;
+  color: white;
+}
+
+.topnavsr .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #343a40;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 0 20px 20px 00;
+  border-top:solid;
+  border-bottom:solid;
+  border-right:solid;
+  border-left: none;
+  border-width: 1px;
+  border-color: #5f84e1;
+  color: white;
+}
+
+.topnavsr .search-container button:hover {
+    color: #5f84e1;
+}
+
+/* end of header css */

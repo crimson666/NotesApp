@@ -1,0 +1,20 @@
+.ParentContainer{
+}
+.listCnotainer{
+    height:600px;overflow:scroll;padding-right: 35px;
+}
+.ItemContainer{
+    box-shadow:0 1px 5px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.19) !important;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding : 6px;
+    margin-top: 10px;
+    border-bottom:solid;
+    border-color: #5f84e1;
+    border-bottom-width: 5px;
+}
+.NoteTitle{
+    font-size: 25px;
+    color: gray;
+    font-weight: 500;
+}
