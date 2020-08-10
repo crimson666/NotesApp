@@ -9,6 +9,7 @@ export class NoteContainerComponent implements OnInit {
   formValue: any = [];
   NoteBodyText: string ='';
   itemIndex: any;
+  CurrentDate = new Date();
 
   constructor() { }
 

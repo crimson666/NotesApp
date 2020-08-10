@@ -8,5 +8,9 @@
 .mt20{
     margin-top: 20px;
 }
-
+.Textellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
 

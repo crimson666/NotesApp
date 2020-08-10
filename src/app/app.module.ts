@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NoteContainerComponent } from './note-container/note-container.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DatePipe } from './shared/date.pipe';
+//import { DatePipe } from './shared/date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NoteContainerComponent,
-    DatePipe
+    //DatePipe
   ],
   imports: [
     BrowserModule,
