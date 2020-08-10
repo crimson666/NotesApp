@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-note-container',
@@ -7,51 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoteContainerComponent implements OnInit {
   formValue: any = [];
+  NoteBodyText: string ='';
+  itemIndex: any;
+
   constructor() { }
 
-  NotesAppsList = [
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-    {
-      "lable": "My Frist Text",
-      "textBody": "Frist Bla bla bla bla"
-    },
-  ];
+  @Output() EmmitIndex = new EventEmitter<any>();
+  @Input() NotesAppsList:any;
 
   ngOnInit(): void {
-    //this.formValue = JSON.parse(localStorage.getItem('NotesData'));
     this.getNoteList();
   }
   getNoteList(){
     this.formValue = this.NotesAppsList;
   }
-  
+  itemSelect(i){
+    this.itemIndex = i;
+    this.EmmitIndex.emit(this.itemIndex);
+    this.NoteBodyText = this.NotesAppsList[i]["textBody"];
 
+  }
+  textBodyChanged(){
+    this.NotesAppsList[this.itemIndex]["textBody"] = this.NoteBodyText;
+    this.formValue = this.NotesAppsList;
+  }
 
 }

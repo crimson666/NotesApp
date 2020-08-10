@@ -12,6 +12,10 @@
     border-bottom:solid;
     border-color: #5f84e1;
     border-bottom-width: 5px;
+    cursor: pointer;
+}
+.ItemContainer:hover{
+    background: #eaeefb;
 }
 .NoteTitle{
     font-size: 25px;
@@ -29,4 +33,9 @@
     border: none;
     outline: 0;
     box-shadow:0 1px 5px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(95, 132, 225, 0.6) !important;
+}
+
+.SelectContainerClass{
+    background: #eaeefb;
+    box-shadow:0 1px 5px 0 rgba(0,0,0,0.2),0 6px 5px 0 rgba(0, 0, 225, 0.6) !important;
 }

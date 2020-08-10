@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-note-container></app-note-container>
+<app-header [NotesAppsList] = "NotesAppsList" [index] = "index" ></app-header>
+<app-note-container [NotesAppsList] = "NotesAppsList" (EmmitIndex) ="reciveIndex($event)"></app-note-container>

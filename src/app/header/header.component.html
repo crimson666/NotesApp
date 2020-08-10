@@ -15,10 +15,10 @@
           <button type="button" class="fas fa fa-plus" data-toggle="modal" data-target="#exampleModal"></button>
         </div>
         <div class="col-sm-2">
-          <a href="#" class="fas fa fa-trash"></a>
+          <button type="button" class="fas fa fa-trash" (click)="deleteEvent()"></button>
         </div>
         <div class="col-sm-2">
-          <a href="#" class="fas fa fa-edit"></a>
+          <a href="#" class="fas fa fa-edit" [ngClass]="{'FasActive': index > 0 }"></a>
         </div>  
         <div class="col-sm-2">
           <a href="#" class="fas fa fa-lock"></a>

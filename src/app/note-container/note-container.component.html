@@ -2,23 +2,22 @@
     <div class="col-sm-4 listCnotainer">
         
         <!-- Repeted List Items -->
-        <div class="ItemContainer row" *ngFor="let notesData of formValue">
+        <div class="ItemContainer row" *ngFor="let notesData of formValue;let i = index;" (click)="itemSelect(i)" [ngClass]="{'SelectContainerClass': i === itemIndex}">
             <div class="col-sm-12 p0">
                 <p class="NoteTitle">{{notesData.lable}}</p>
             </div>
             <div class="col-sm-4 p0">
-                3:45 PM
+                {{notesData.time | date }}
             </div>
             <div class="col-sm-8 p0">
                 {{notesData.textBody}}
             </div>
             <div class="col-sm-12 btmColBorder">
-
             </div>
         </div>
 
     </div>
     <div class="col-sm-8">
-        <textarea id="w3review" class="mt20 textBody" name="w3review" rows="20" cols="100"></textarea>
+        <textarea id="w3review" type="text" [(ngModel)]="NoteBodyText" (keyup)="textBodyChanged()" class="mt20 textBody" name="w3review" rows="20" cols="80" ></textarea>
     </div>
 </div>
